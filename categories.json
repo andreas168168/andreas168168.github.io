@@ -1,0 +1,9 @@
+{
+    "meat": ["meat", "beef", "pork", "chicken", "lamb"],
+    "butter": ["butter", "spreadable fats", "animal fats", "dairy-spread", "salted butters","Smör","Fett"],
+    "milk": ["milk", "dairy", "milk-fat"],
+    "vegetables": ["vegetables", "veggies", "greens"],
+    "fruits": ["fruits", "fruit"],
+    "grains": ["grains", "cereal", "wheat", "rice","Snacks","Spreads"],
+    "default": ["food"]
+}
