@@ -32,7 +32,11 @@ async function openCamera() {
         loading.hidden = false;
         result.textContent = 'Initializing camera...';
 
-        stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+        stream = await navigator.mediaDevices.getUserMedia({ 
+            video: { 
+                facingMode: { exact: "environment" } // Use the rear camera on mobile devices
+            } 
+        });
         video.srcObject = stream;
         video.hidden = false;
 
