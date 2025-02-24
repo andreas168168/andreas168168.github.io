@@ -102,7 +102,7 @@ async function fetchProductInfo(barcode) {
         loading.hidden = false;
         result.textContent = 'Fetching product info...';
 
-        const response = await fetch('https://andreas168168-github-io-7.onrender.com/', {
+        const response = await fetch('https://andreas168168-github-io-9.onrender.com/scan', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ barcode }),
