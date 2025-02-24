@@ -64,7 +64,7 @@ def scan():
                     return jsonify({"error": "Product not found in external API"}), 404
             else:
                 print(f"External API error: {response.status_code}, {response.text}")
-                return jsonify({"error": "Failed to fetch product from external API"}), 500
+                return jsonify({"error": f"Failed to fetch product from external API: {response.status_code}"}), response.status_code
 
         return jsonify({"product_info": product_info}), 200
 
