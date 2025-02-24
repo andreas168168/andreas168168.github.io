@@ -169,6 +169,28 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             margin-top: 20px;
+            position: relative;
+        }
+        .guide-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 30%;
+            border: 2px dashed #007BFF;
+            box-sizing: border-box;
+            pointer-events: none; /* Allow clicks to pass through */
+        }
+        @media (max-width: 600px) {
+            video {
+                width: 100%;
+                height: auto;
+            }
+            .guide-box {
+                width: 80%;
+                height: 30%;
+            }
         }
     </style>
 </head>
@@ -193,7 +215,10 @@
     <div id="scanner" class="container">
         <h1>Scan Two Products</h1>
         <button id="scanButton">Open Camera</button>
-        <video id="video" autoplay hidden></video>
+        <div style="position: relative; display: inline-block;">
+            <video id="video" autoplay hidden></video>
+            <div class="guide-box" hidden></div>
+        </div>
         <p id="result"></p>
     </div>
     
