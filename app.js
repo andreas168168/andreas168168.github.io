@@ -12,6 +12,7 @@ const result = document.getElementById('result');
 const loading = document.getElementById('loading');
 const productInfo = document.getElementById('productInfo');
 const comparisonContainer = document.getElementById('comparisonContainer');
+const guideBox = document.querySelector('.guide-box');
 
 let scannedBarcodes = [];
 let scannedProducts = [];
@@ -39,6 +40,7 @@ async function openCamera() {
         });
         video.srcObject = stream;
         video.hidden = false;
+        guideBox.hidden = false;
 
         Quagga.init({
             inputStream: {
@@ -98,6 +100,7 @@ function closeCamera() {
         stream.getTracks().forEach(track => track.stop());
     }
     video.hidden = true;
+    guideBox.hidden = true;
 }
 
 // Fetch Product Info
