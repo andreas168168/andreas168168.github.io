@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Solutions - EcoScanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4d8f59 0%, #3a7daa 100%);
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .feature-icon {
+            background-color: rgba(77, 143, 89, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Left: Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="landing_page.html" class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" class="w-8 h-8 text-green-600" fill="currentColor">
+                            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                            <path d="M17 2H7L2 7v10l5 5h10l5-5V7l-5-5zm3 14.59L15.59 21H8.41L4 16.59V7.41L8.41 3h7.18L20 7.41v9.18z"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-green-600">Eco</span>
+                        <span class="text-xl font-bold text-blue-600">Scanner</span>
+                    </a>
+                </div>
+    
+                <!-- Center: Nav -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="landing_page.html" class="text-lg text-gray-700 hover:text-green-600">Home</a>
+                    <a href="aboutus_landing.html" class="text-lg text-gray-700 hover:text-green-600">About Us</a>
+                    <a href="bussniessolution_landing.html" class="text-lg text-green-700 hover:text-green-600">Business Solutions</a>
+                    <a href="contact_landing.html" class="text-lg text-gray-700 hover:text-green-600">Contact</a>
+                </nav>
+    
+                <!-- Right: Language + Login -->
+                <div class="flex items-center">
+                    <select class="mr-4 text-sm rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                        <option value="fr">FR</option>
+                    </select>
+                    <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Business Solutions for Sustainable Retail
+                </h1>
+                <p class="mt-6 text-xl max-w-3xl mx-auto">
+                    Integrate our advanced barcode scanning technology to provide customers with real-time environmental impact data for food products.
+                </p>
+                <div class="mt-10 flex justify-center">
+                    <a href="#contact-form" class="px-8 py-3 text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10">
+                        Schedule Demo
+                    </a>
+                    <a href="#pricing" class="ml-4 px-8 py-3 text-base font-medium rounded-md text-green-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Key Benefits for Your Business
+                </h2>
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                    Implementing EcoScanner's barcode technology offers numerous advantages for retailers and food businesses.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Benefit 1 -->
+                <div class="relative p-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="feature-icon h-12 w-12 flex items-center justify-center rounded-md text-green-600 mb-4">
+                        <i class="fas fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Enhanced Brand Reputation</h3>
+                    <p class="mt-4 text-gray-500">
+                        Position your business as an environmental leader, building trust and loyalty among eco-conscious consumers who increasingly demand transparency.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="relative p-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="feature-icon h-12 w-12 flex items-center justify-center rounded-md text-green-600 mb-4">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Increased Sales Conversion</h3>
+                    <p class="mt-4 text-gray-500">
+                        Studies show that 73% of consumers are willing to pay more for sustainable products when provided with clear environmental impact information.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="relative p-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="feature-icon h-12 w-12 flex items-center justify-center rounded-md text-green-600 mb-4">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Customer Engagement</h3>
+                    <p class="mt-4 text-gray-500">
+                        Create meaningful interactions with customers through our scanner, driving engagement and building lasting relationships based on shared values.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="relative p-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="feature-icon h-12 w-12 flex items-center justify-center rounded-md text-green-600 mb-4">
+                        <i class="fas fa-database text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Valuable Consumer Insights</h3>
+                    <p class="mt-4 text-gray-500">
+                        Gain access to powerful analytics on consumer preferences for sustainable products, informing inventory decisions and marketing strategies.
+                    </p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="relative p-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="feature-icon h-12 w-12 flex items-center justify-center rounded-md text-green-600 mb-4">
+                        <i class="fas fa-award text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Compliance & Reporting</h3>
+                    <p class="mt-4 text-gray-500">
+                        Stay ahead of regulatory requirements for environmental impact disclosure with automated data collection and reporting capabilities.
+                    </p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="relative p-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div class="feature-icon h-12 w-12 flex items-center justify-center rounded-md text-green-600 mb-4">
+                        <i class="fas fa-tachometer-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Competitive Advantage</h3>
+                    <p class="mt-4 text-gray-500">
+                        Differentiate your business in a crowded marketplace by providing unique value that aligns with growing consumer demand for sustainable options.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Options -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Flexible Integration Options
+                </h2>
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                    Multiple ways to implement our technology into your existing business infrastructure.
+                </p>
+            </div>
+
+            <div class="grid gap-16 lg:grid-cols-2">
+                <!-- API Integration -->
+                <div class="relative">
+                    <div class="lg:flex">
+                        <div class="relative lg:w-1/2">
+                            <img class="h-64 w-full object-cover rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="API Integration">
+                        </div>
+                        <div class="relative mt-6 lg:mt-0 lg:ml-10 lg:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-900">API Integration</h3>
+                            <p class="mt-4 text-gray-500">
+                                Our robust REST API allows seamless integration with your existing applications, websites, or in-store systems. Our developer-friendly documentation and SDKs make the process straightforward.
+                            </p>
+                            <ul class="mt-6 space-y-3">
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Comprehensive documentation and support</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">SDK libraries for major platforms</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Customizable response formats</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- White Label App -->
+                <div class="relative">
+                    <div class="lg:flex">
+                        <div class="relative lg:w-1/2">
+                            <img class="h-64 w-full object-cover rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="White Label App">
+                        </div>
+                        <div class="relative mt-6 lg:mt-0 lg:ml-10 lg:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-900">White Label App</h3>
+                            <p class="mt-4 text-gray-500">
+                                Get a fully-branded mobile application with your company's look and feel. Our white label solution can be deployed quickly with minimal development effort.
+                            </p>
+                            <ul class="mt-6 space-y-3">
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Custom branding and UI/UX</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Available for iOS and Android</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Regular updates and maintenance</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In-Store Kiosk -->
+                <div class="relative">
+                    <div class="lg:flex">
+                        <div class="relative lg:w-1/2">
+                            <img class="h-64 w-full object-cover rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="In-Store Kiosk">
+                        </div>
+                        <div class="relative mt-6 lg:mt-0 lg:ml-10 lg:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-900">In-Store Kiosk</h3>
+                            <p class="mt-4 text-gray-500">
+                                Deploy dedicated in-store kiosks where customers can scan product barcodes before purchase. Includes hardware and software in an all-in-one solution.
+                            </p>
+                            <ul class="mt-6 space-y-3">
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Touchscreen interface with high-quality scanner</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Remote management and monitoring</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Hardware warranty and maintenance included</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POS Integration -->
+                <div class="relative">
+                    <div class="lg:flex">
+                        <div class="relative lg:w-1/2">
+                            <img class="h-64 w-full object-cover rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="POS Integration">
+                        </div>
+                        <div class="relative mt-6 lg:mt-0 lg:ml-10 lg:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-900">POS Integration</h3>
+                            <p class="mt-4 text-gray-500">
+                                Connect our system directly to your point-of-sale system to provide emission data on receipts and display environmental information at checkout.
+                            </p>
+                            <ul class="mt-6 space-y-3">
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Compatible with major POS systems</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Emission data on customer receipts</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span class="text-gray-500">Total basket environmental impact calculation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    How Our Technology Works
+                </h2>
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                    Powered by advanced algorithms and the world's largest food emissions database
+                </p>
+            </div>
+
+            <div class="relative">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                    <div class="relative">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <video controls playsinline webkit-playsinline class="rounded-lg shadow-lg">
+                                <source src="https://cdn.jsdelivr.net/gh/example/videos@main/ecoscanner-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 lg:mt-0">
+                        <div class="space-y-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                        <span class="text-lg font-bold">1</span>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Barcode Scan</h3>
+                                    <p class="mt-2 text-gray-500">
+                                        When a customer scans a food product barcode, our system instantly recognizes the unique identifier.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                        <span class="text-lg font-bold">2</span>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Data Lookup</h3>
+                                    <p class="mt-2 text-gray-500">
+                                        The barcode is matched against our database of over 2 million food products with detailed environmental impact data.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                        <span class="text-lg font-bold">3</span>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Impact Calculation</h3>
+                                    <p class="mt-2 text-gray-500">
+                                        Our proprietary algorithm calculates the carbon footprint, water usage, land use, and other environmental metrics.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                        <span class="text-lg font-bold">4</span>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">User-Friendly Display</h3>
+                                    <p class="mt-2 text-gray-500">
+                                        Results are presented in an easily understandable format with visual comparisons and actionable information.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Flexible Pricing Plans
+                </h2>
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                    Choose the plan that best fits your business size and needs
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <!-- Starter Plan -->
+                <div class="pricing-card border border-gray-200 rounded-lg shadow-sm bg-white overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-gray-900">Starter</h3>
+                        <p class="mt-4 text-sm text-gray-500">Perfect for small retailers or cafes</p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">$99</span>
+                            <span class="text-base font-medium text-gray-500">/month</span>
+                        </p>
+                        <p class="mt-4 text-sm text-gray-500">Up to 5,000 scans per month</p>
+                    </div>
+                    <div class="px-6 pt-6 pb-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">API access</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Basic analytics dashboard</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Email support</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-times text-gray-400"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-400">Custom branding</p>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#contact-form" class="block w-full bg-gray-100 border border-gray-300 rounded-md py-2 text-sm font-medium text-gray-700 text-center hover:bg-gray-200">
+                                Start with Starter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="pricing-card border-2 border-green-500 rounded-lg shadow-lg bg-white overflow-hidden z-10 transform scale-105">
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-gray-900">Business</h3>
+                        <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 text-xs font-semibold rounded-bl-lg">
+                            POPULAR
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500">For growing retailers and supermarkets</p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">$299</span>
+                            <span class="text-base font-medium text-gray-500">/month</span>
+                        </p>
+                        <p class="mt-4 text-sm text-gray-500">Up to 25,000 scans per month</p>
+                    </div>
+                    <div class="px-6 pt-6 pb-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Everything in Starter</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">White label mobile app</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Advanced analytics</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Priority support</p>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#contact-form" class="block w-full bg-green-500 border border-transparent rounded-md py-2 text-sm font-medium text-white text-center hover:bg-green-600">
+                                Start with Business
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card border border-gray-200 rounded-lg shadow-sm bg-white overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-gray-900">Enterprise</h3>
+                        <p class="mt-4 text-sm text-gray-500">For large retail chains and franchises</p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">$799</span>
+                            <span class="text-base font-medium text-gray-500">/month</span>
+                        </p>
+                        <p class="mt-4 text-sm text-gray-500">Up to 100,000 scans per month</p>
+                    </div>
+                    <div class="px-6 pt-6 pb-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Everything in Business</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">POS system integration</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">In-store kiosk option</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Dedicated account manager</p>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#contact-form" class="block w-full bg-gray-100 border border-gray-300 rounded-md py-2 text-sm font-medium text-gray-700 text-center hover:bg-gray-200">
+                                Start with Enterprise
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Plan -->
+                <div class="pricing-card border border-gray-200 rounded-lg shadow-sm bg-white overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-gray-900">Custom</h3>
+                        <p class="mt-4 text-sm text-gray-500">Tailored solution for unique requirements</p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">Custom</span>
+                        </p>
+                        <p class="mt-4 text-sm text-gray-500">Unlimited scans available</p>
+                    </div>
+                    <div class="px-6 pt-6 pb-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">All Enterprise features</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">Custom development</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">On-premises deployment option</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-check text-green-500"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-700">24/7 premium support</p>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#contact-form" class="block w-full bg-gray-100 border border-gray-300 rounded-md py-2 text-sm font-medium text-gray-700 text-center hover:bg-gray-200">
+                                Contact Sales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Frequently Asked Questions
+                </h2>
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                    Get answers to common questions about our business solutions
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <dl class="space-y-8">
+                    <div>
+                        <dt class="text-lg font-medium text-gray-900">
+                            How accurate is the emissions data?
+                        </dt>
+                        <dd class="mt-2 text-gray-500">
+                            Our emissions data is calculated using a combination of lifecycle assessment methodologies, supply chain information, and third-party verified datasets. We maintain a 92-95% accuracy rate compared to full LCA studies, with continual updates based on the latest research.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg font-medium text-gray-900">
+                            How long does implementation take?
+                        </dt>
+                        <dd class="mt-2 text-gray-500">
+                            Implementation timelines vary based on the integration method chosen. API integrations can be completed in 1-2 weeks, white-label apps in 3-4 weeks, and in-store kiosk deployments in 4-6 weeks. Our team works closely with you to establish a clear project timeline.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg font-medium text-gray-900">
+                            What types of food products are supported?
+                        </dt>
+                        <dd class="mt-2 text-gray-500">
+                            Our database covers over 2 million food products across all major categories including produce, meat, dairy, packaged foods, beverages, and prepared meals. We have particularly strong coverage in North America and Europe, with expanding coverage in Asia and South America.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg font-medium text-gray-900">
+                            Can we add our own product data?
+                        </dt>
+                        <dd class="mt-2 text-gray-500">
+                            Yes! Enterprise and Custom plans include the ability to upload and integrate your own product data and emissions calculations. This is particularly valuable for private label products or items with supply chain information you already possess.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg font-medium text-gray-900">
+                            Is the system GDPR compliant?
+                        </dt>
+                        <dd class="mt-2 text-gray-500">
+                            Yes, our system is fully GDPR compliant. We offer data processing agreements, maintain strict data protection protocols, and provide transparent information on how consumer data is handled. Personal data is encrypted and anonymized.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg font-medium text-gray-900">
+                            Do you offer custom reporting features?
+                        </dt>
+                        <dd class="mt-2 text-gray-500">
+                            All business plans include comprehensive reporting features. Enterprise and Custom plans offer tailored reporting dashboards that can be designed to match your specific KPIs and sustainability metrics. Reports can be automated and scheduled for delivery.
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-md mx-auto bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                <div class="py-8 px-6 bg-gradient-to-r from-green-500 to-blue-500 sm:px-10">
+                    <h2 class="text-2xl font-bold text-white">
+                        Ready to get started?
+                    </h2>
+                    <p class="mt-1 text-white">
+                        Fill out the form and our team will contact you within 24 hours.
+                    </p>
+                </div>
+                <div class="py-10 px-6 sm:px-10">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full name</label>
+                            <div class="mt-1">
+                                <input id="name" name="name" type="text" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                            <div class="mt-1">
+                                <input id="email" name="email" type="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                            <div class="mt-1">
+                                <input id="company" name="company" type="text" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="plan" class="block text-sm font-medium text-gray-700">Interested in</label>
+                            <div class="mt-1">
+                                <select id="plan" name="plan" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                                    <option value="starter">Starter Plan</option>
+                                    <option value="business">Business Plan</option>
+                                    <option value="enterprise">Enterprise Plan</option>
+                                    <option value="custom">Custom Solution</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <div class="mt-1">
+                                <textarea id="message" name="message" rows="4" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                                Request Demo
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="gradient-bg py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-white">
+                    Ready to transform your business with sustainable technology?
+                </h2>
+                <p class="mt-4 text-lg text-white opacity-90">
+                    Join the growing network of retailers making a positive environmental impact.
+                </p>
+                <div class="mt-8 flex justify-center">
+                    <a href="#contact-form" class="px-8 py-3 text-base font-medium rounded-md text-green-600 bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10">
+                        Get Started Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About EcoScanner</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Our Mission</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">News</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Barcode Scanner</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">API Integration</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">White Label App</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">In-Store Kiosks</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">POS Integration</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">API Reference</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-300">Subscribe to our newsletter</p>
+                    <form class="mt-2 flex">
+                        <input type="email" class="px-3 py-2 w-full text-sm text-black rounded-l-md focus:outline-none" placeholder="Email address">
+                        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-r-md hover:bg-green-700">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2023 EcoScanner. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

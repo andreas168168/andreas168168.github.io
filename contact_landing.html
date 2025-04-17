@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EcoScanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        
+        .eco-primary {
+            background-color: #4d8f59;
+        }
+        
+        .eco-secondary {
+            background-color: #3a7daa;
+        }
+        
+        .eco-accent {
+            background-color: #f7a600;
+        }
+        
+        .text-eco-primary {
+            color: #4d8f59;
+        }
+        
+        .text-eco-secondary {
+            color: #3a7daa;
+        }
+        
+        .text-eco-accent {
+            color: #f7a600;
+        }
+        
+        .border-eco-primary {
+            border-color: #4d8f59;
+        }
+        
+        .border-eco-secondary {
+            border-color: #3a7daa;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #ebf5ee 0%, #e0f0f7 100%);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: #4d8f59;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(77, 143, 89, 0.2);
+        }
+        
+        .office-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container {
+            height: 400px;
+            width: 100%;
+            background-color: #e5e7eb;
+        }
+        
+        .social-icon {
+            transition: transform 0.3s, color 0.3s;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: #4d8f59;
+        }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="scrollbar-hide">
+ <!-- Header -->
+ <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Left: Logo -->
+            <div class="flex items-center flex-shrink-0">
+                <a href="landing_page.html" class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" class="w-8 h-8 text-green-600" fill="currentColor">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                        <path d="M17 2H7L2 7v10l5 5h10l5-5V7l-5-5zm3 14.59L15.59 21H8.41L4 16.59V7.41L8.41 3h7.18L20 7.41v9.18z"/>
+                    </svg>
+                    <span class="ml-2 text-xl font-bold text-green-600">Eco</span>
+                    <span class="text-xl font-bold text-blue-600">Scanner</span>
+                </a>
+            </div>
+
+            <!-- Center: Nav -->
+            <nav class="hidden md:flex md:space-x-8">
+                <a href="landing_page.html" class="text-lg text-gray-700 hover:text-green-600">Home</a>
+                <a href="aboutus_landing.html" class="text-lg text-gray-700 hover:text-green-600">About Us</a>
+                <a href="bussniessolution_landing.html" class="text-lg text-gray-700 hover:text-green-600">Business Solutions</a>
+                <a href="contact_landing.html" class="text-lg text-green-700 hover:text-green-600">Contact</a>
+            </nav>
+
+            <!-- Right: Language + Login -->
+            <div class="flex items-center">
+                <select class="mr-4 text-sm rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                    <option value="fr">FR</option>
+                </select>
+                <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-eco-secondary mb-4">Get in Touch</h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">We're here to help with any questions about our barcode scanner technology or to discuss how we can work together.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-eco-secondary mb-6">Send Us a Message</h2>
+                    <p class="text-gray-600 mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-eco-primary" required>
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="business">Business Partnerships</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg" required></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="subscribe" name="subscribe" class="mr-2">
+                            <label for="subscribe" class="text-gray-700">Subscribe to our newsletter to stay updated</label>
+                        </div>
+                        
+                        <button type="submit" class="eco-secondary text-white font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300 inline-block">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-eco-secondary mb-6">Contact Information</h2>
+                    <p class="text-gray-600 mb-8">You can also reach out to us using the contact information below.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-eco-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Main Office Address</h3>
+                                <p class="text-gray-600 mt-1">123 Eco Street, Sustainable Building<br>Green Valley, CA 94123<br>United States</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-eco-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Phone Numbers</h3>
+                                <p class="text-gray-600 mt-1">General: +1 (555) 123-4567<br>Support: +1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-eco-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Email Addresses</h3>
+                                <p class="text-gray-600 mt-1">General Inquiries: <a href="mailto:info@ecoscanner.com" class="text-eco-secondary hover:underline">info@ecoscanner.com</a><br>
+                                Support: <a href="mailto:support@ecoscanner.com" class="text-eco-secondary hover:underline">support@ecoscanner.com</a><br>
+                                Business: <a href="mailto:business@ecoscanner.com" class="text-eco-secondary hover:underline">business@ecoscanner.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-eco-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Business Hours</h3>
+                                <p class="text-gray-600 mt-1">Monday - Friday: 9:00 AM - 6:00 PM (PST)<br>
+                                Saturday: 10:00 AM - 2:00 PM (PST)<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Connect With Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon text-gray-600 hover:text-eco-primary text-2xl">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon text-gray-600 hover:text-eco-primary text-2xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon text-gray-600 hover:text-eco-primary text-2xl">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-icon text-gray-600 hover:text-eco-primary text-2xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-gray-600 hover:text-eco-primary text-2xl">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Support Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-eco-secondary mb-2 text-center">Support Resources</h2>
+            <p class="text-gray-700 text-center mb-12 max-w-3xl mx-auto">Get the help you need with our comprehensive support resources.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Support Card 1 -->
+                <div class="bg-gray-50 rounded-lg border border-gray-200 p-8 text-center hover:shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-eco-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-book text-2xl text-eco-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Knowledge Base</h3>
+                    <p class="text-gray-600 mb-5">Find answers to frequently asked questions and detailed documentation.</p>
+                    <a href="#" class="text-eco-secondary font-medium hover:underline">Browse Articles</a>
+                </div>
+                
+                <!-- Support Card 2 -->
+                <div class="bg-gray-50 rounded-lg border border-gray-200 p-8 text-center hover:shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-eco-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-headset text-2xl text-eco-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Technical Support</h3>
+                    <p class="text-gray-600 mb-5">Contact our technical support team for assistance with any issues.</p>
+                    <a href="#" class="text-eco-secondary font-medium hover:underline">Get Support</a>
+                </div>
+                
+                <!-- Support Card 3 -->
+                <div class="bg-gray-50 rounded-lg border border-gray-200 p-8 text-center hover:shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-eco-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-2xl text-eco-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">QnA</h3>
+                    <p class="text-gray-600 mb-5">Find quick answers to some of our most commonly asked questions.
+                    </p>
+                    <a href="#" class="text-eco-secondary font-medium hover:underline">See QnA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 px-4 eco-secondary">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+                <p class="text-white text-opacity-90 mb-8 text-lg">Subscribe to our newsletter for the latest updates on sustainable living, product features, and news.</p>
+                
+                <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg focus:outline-none" required>
+                    <button type="submit" class="eco-accent text-white font-semibold py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300">Subscribe</button>
+                </form>
+                
+                <p class="text-white text-opacity-70 mt-4 text-sm">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-eco-secondary mb-2 text-center">Frequently Asked Questions</h2>
+            <p class="text-gray-700 text-center mb-12 max-w-3xl mx-auto">Find quick answers to some of our most commonly asked questions.</p>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all duration-300">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">How quickly will I receive a response to my inquiry?</h3>
+                    <p class="text-gray-600">We strive to respond to all inquiries within 24 business hours. For urgent matters, please call our support line directly.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all duration-300">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Do you offer technical support outside of business hours?</h3>
+                    <p class="text-gray-600">Yes, for our Business Solutions clients, we offer 24/7 emergency technical support. Standard support is available during regular business hours.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all duration-300">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">How can I schedule a demo of your barcode scanner technology?</h3>
+                    <p class="text-gray-600">You can schedule a demo by filling out our contact form and selecting "Business Partnerships" as the subject, or by emailing business@ecoscanner.com directly.</p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all duration-300">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Do you have partner programs for retailers?</h3>
+                    <p class="text-gray-600">Yes, we offer partnership programs for retailers of all sizes. Please contact our business team for more information about our retail integration options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-eco-accent">EcoScanner</h3>
+                    <p class="text-gray-400 mb-4">Leading the way in sustainable shopping through innovative barcode scanning technology.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="landing_page.html" class="text-gray-700 hover:text-green-600">Home</a></li>
+                        <li><a href="aboutus_landing.html" class="text-green-600 font-semibold">About Us</a></li>
+                        <li><a href="bussniessolution_landing.html" class="text-gray-700 hover:text-green-600">Business Solutions</a></li>
+                        <li><a href="contact_landing.html" class="text-gray-700 hover:text-green-600">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Knowledge Base</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-eco-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Eco Street, Green Valley, CA 94123, USA</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-eco-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-eco-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@ecoscanner.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 EcoScanner. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 mx-2">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 mx-2">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 mx-2">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

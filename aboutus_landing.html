@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EcoScanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        .eco-primary {
+            color: #4d8f59;
+        }
+        .eco-secondary {
+            color: #3a7daa;
+        }
+        .eco-primary-bg {
+            background-color: #4d8f59;
+        }
+        .eco-secondary-bg {
+            background-color: #3a7daa;
+        }
+        .eco-accent {
+            color: #f7a600;
+        }
+        .eco-accent-bg {
+            background-color: #f7a600;
+        }
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #4d8f59;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: #f7a600;
+            border: 4px solid #4d8f59;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.left {
+            left: 0;
+            padding-right: 40px;
+        }
+        .timeline-item.right {
+            left: 50%;
+            padding-left: 40px;
+        }
+        .timeline-item.right::after {
+            left: -10px;
+        }
+        @media screen and (max-width: 768px) {
+            .timeline-container::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item.left {
+                left: 0;
+            }
+            .timeline-item.right {
+                left: 0;
+            }
+            .timeline-item.left::after, .timeline-item.right::after {
+                left: 20px;
+            }
+        }
+        .shadowed {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .team-card {
+            transition: transform 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Left: Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="landing_page.html" class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" class="w-8 h-8 text-green-600" fill="currentColor">
+                            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                            <path d="M17 2H7L2 7v10l5 5h10l5-5V7l-5-5zm3 14.59L15.59 21H8.41L4 16.59V7.41L8.41 3h7.18L20 7.41v9.18z"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-green-600">Eco</span>
+                        <span class="text-xl font-bold text-blue-600">Scanner</span>
+                    </a>
+                </div>
+    
+                <!-- Center: Nav -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="landing_page.html" class="text-lg text-gray-700 hover:text-green-600">Home</a>
+                    <a href="aboutus_landing.html" class="text-lg text-green-700 hover:text-green-600">About Us</a>
+                    <a href="bussniessolution_landing.html" class="text-lg text-gray-700 hover:text-green-600">Business Solutions</a>
+                    <a href="contact_landing.html" class="text-lg text-gray-700 hover:text-green-600">Contact</a>
+                </nav>
+    
+                <!-- Right: Language + Login -->
+                <div class="flex items-center">
+                    <select class="mr-4 text-sm rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                        <option value="fr">FR</option>
+                    </select>
+                    <a href="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6"><span class="eco-primary">Our Mission</span> for a <span class="eco-secondary">Sustainable Future</span></h1>
+            <p class="text-xl max-w-3xl mx-auto text-gray-600 mb-8">At EcoScanner, we're revolutionizing the way consumers and businesses understand the environmental impact of food products through innovative barcode scanning technology.</p>
+            <div class="flex justify-center">
+                <div class="w-20 h-1 bg-yellow-500 rounded"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 eco-secondary">Our Story</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item left">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2018: The Beginning</h3>
+                        <p class="text-gray-600">Founded by environmental scientists and tech entrepreneurs, EcoScanner began as a research project at Cambridge University to quantify the carbon footprint of consumer products.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2019: Technology Development</h3>
+                        <p class="text-gray-600">Our team developed the first prototype of the barcode scanner, capable of identifying products and providing basic carbon footprint data.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2020: Database Expansion</h3>
+                        <p class="text-gray-600">We partnered with leading food manufacturers to build a comprehensive database of product emissions, expanding our coverage to over 100,000 products.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2021: Mobile App Launch</h3>
+                        <p class="text-gray-600">The EcoScanner mobile app was released, allowing consumers to scan products while shopping and make more environmentally conscious decisions.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2022: Retail Integration</h3>
+                        <p class="text-gray-600">Major retailers began integrating our technology into their shopping experiences, with in-store kiosks and online product listings.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2023: Global Expansion</h3>
+                        <p class="text-gray-600">EcoScanner expanded internationally, now operating in 15 countries with localized product databases and partnerships.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2024: Advanced AI Integration</h3>
+                        <p class="text-gray-600">Implementation of advanced AI algorithms to provide more accurate emissions data and personalized sustainability recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <h3 class="text-xl font-bold mb-2 eco-primary">2025: Today</h3>
+                        <p class="text-gray-600">Today, EcoScanner is the leading provider of food product emission data, with over 5 million active users and partnerships with hundreds of businesses worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 p-6">
+                    <div class="bg-white p-8 rounded-lg shadowed h-full">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-bullseye text-2xl eco-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 eco-primary">Our Mission</h3>
+                        <p class="text-gray-600 mb-4">To empower consumers and businesses with accessible, accurate information about the environmental impact of food products, enabling more sustainable choices.</p>
+                        <p class="text-gray-600">We believe that transparency in product emissions data is essential for addressing climate change and building a more sustainable food system. By making this information readily available through our barcode scanning technology, we're helping individuals and organizations reduce their carbon footprint.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 p-6">
+                    <div class="bg-white p-8 rounded-lg shadowed h-full">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-eye text-2xl eco-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 eco-secondary">Our Vision</h3>
+                        <p class="text-gray-600 mb-4">A world where every food product's environmental impact is transparent, allowing consumers to make informed choices and driving the industry toward more sustainable practices.</p>
+                        <p class="text-gray-600">We envision a future where emission information is as common on product labels as nutritional facts, and where this transparency creates market incentives for companies to develop more sustainable products and supply chains.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 eco-secondary">Our Core Values</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-green-50 rounded-lg shadowed">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-2xl eco-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 eco-primary">Environmental Responsibility</h3>
+                    <p class="text-gray-600">We are committed to environmental sustainability in everything we do, from our operations to our product development.</p>
+                </div>
+                
+                <div class="p-6 bg-blue-50 rounded-lg shadowed">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check-double text-2xl eco-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 eco-secondary">Data Integrity</h3>
+                    <p class="text-gray-600">We provide accurate, scientifically-backed information that users can trust to make informed decisions.</p>
+                </div>
+                
+                <div class="p-6 bg-yellow-50 rounded-lg shadowed">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-2xl eco-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 eco-accent">Innovation</h3>
+                    <p class="text-gray-600">We continuously push the boundaries of technology to create better, more accessible tools for environmental awareness.</p>
+                </div>
+                
+                <div class="p-6 bg-green-50 rounded-lg shadowed">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-globe text-2xl eco-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 eco-primary">Global Impact</h3>
+                    <p class="text-gray-600">We think globally, developing solutions that can be implemented across diverse markets and cultures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Impact -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 eco-secondary">Our Environmental Impact</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-lg shadowed text-center">
+                    <div class="text-4xl font-bold mb-2 eco-primary">5M+</div>
+                    <p class="text-gray-600">Active Users</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadowed text-center">
+                    <div class="text-4xl font-bold mb-2 eco-primary">250K+</div>
+                    <p class="text-gray-600">Tons of CO2 Avoided</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadowed text-center">
+                    <div class="text-4xl font-bold mb-2 eco-primary">500+</div>
+                    <p class="text-gray-600">Business Partners</p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadowed">
+                <h3 class="text-2xl font-bold mb-6 eco-secondary text-center">How We're Making a Difference</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-bold mb-3 eco-primary">Shifting Consumer Behavior</h4>
+                        <p class="text-gray-600 mb-6">Our user surveys show that after using EcoScanner for three months, people make more environmentally friendly food choices 42% more often, resulting in an average reduction of 1.2 tons of CO2 per user annually.</p>
+                        
+                        <h4 class="text-xl font-bold mb-3 eco-primary">Driving Industry Change</h4>
+                        <p class="text-gray-600">By providing transparency on product emissions, we've created market pressure that has led 76 major food manufacturers to reformulate products or improve their supply chains for lower environmental impact.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-bold mb-3 eco-primary">Supporting Sustainable Agriculture</h4>
+                        <p class="text-gray-600 mb-6">Our partnership program has helped connect sustainable farmers with major retailers, increasing market share for environmentally responsible agricultural practices.</p>
+                        
+                        <h4 class="text-xl font-bold mb-3 eco-primary">Environmental Education</h4>
+                        <p class="text-gray-600">Beyond product scanning, our educational content has reached over 12 million people, raising awareness about the connection between food choices and climate change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 eco-secondary">Meet Our Team</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="team-card bg-white rounded-lg shadowed overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=500&h=350" alt="Dr. Emma Wilson" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 eco-primary">Dr. Emma Wilson</h3>
+                        <p class="text-gray-500 mb-3">Co-Founder & CEO</p>
+                        <p class="text-gray-600 mb-4">Environmental scientist with 15 years of experience in sustainability research and climate policy development.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg shadowed overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=500&h=350" alt="Michael Chen" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 eco-primary">Michael Chen</h3>
+                        <p class="text-gray-500 mb-3">Co-Founder & CTO</p>
+                        <p class="text-gray-600 mb-4">Former Google engineer specializing in machine learning and computer vision technology for product recognition.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg shadowed overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=500&h=350" alt="Dr. Sarah Johnson" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 eco-primary">Dr. Sarah Johnson</h3>
+                        <p class="text-gray-500 mb-3">Chief Science Officer</p>
+                        <p class="text-gray-600 mb-4">Leading expert in lifecycle assessment methodology and carbon footprint analysis for food systems.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg shadowed overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=500&h=350" alt="James Rodriguez" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 eco-primary">James Rodriguez</h3>
+                        <p class="text-gray-500 mb-3">Head of Business Development</p>
+                        <p class="text-gray-600 mb-4">Former sustainability director at Unilever with extensive experience in corporate partnerships and strategy.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg shadowed overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=500&h=350" alt="David Okafor" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 eco-primary">David Okafor</h3>
+                        <p class="text-gray-500 mb-3">Director of Product</p>
+                        <p class="text-gray-600 mb-4">UX/UI expert focused on making complex environmental data accessible and actionable for everyday users.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg shadowed overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1601931935821-5fbe71157695?auto=format&fit=crop&q=80&w=500&h=350" alt="Dr. Aisha Patel" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 eco-primary">Dr. Aisha Patel</h3>
+                        <p class="text-gray-500 mb-3">Head of Research</p>
+                        <p class="text-gray-600 mb-4">Environmental data scientist specializing in agricultural emissions modeling and database development.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Recognition -->
+    <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 eco-secondary">Partners & Recognition</h2>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center eco-primary">Our Partners</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                    <div class="flex justify-center">
+                        <svg height="60" viewBox="0 0 100 30" class="opacity-70 hover:opacity-100 transition-opacity">
+                            <path d="M50 5C25 5 5 15 5 25h90c0-10-20-20-45-20z" fill="#3a7daa"/>
+                        </svg>
+                    </div>
+                    <div class="flex justify-center">
+                        <svg height="60" viewBox="0 0 100 30" class="opacity-70 hover:opacity-100 transition-opacity">
+                            <rect x="10" y="5" width="80" height="20" rx="10" fill="#4d8f59"/>
+                        </svg>
+                    </div>
+                    <div class="flex justify-center">
+                        <svg height="60" viewBox="0 0 100 30" class="opacity-70 hover:opacity-100 transition-opacity">
+                            <circle cx="50" cy="15" r="15" fill="#f7a600"/>
+                        </svg>
+                    </div>
+                    <div class="flex justify-center">
+                        <svg height="60" viewBox="0 0 100 30" class="opacity-70 hover:opacity-100 transition-opacity">
+                            <polygon points="50,5 20,25 80,25" fill="#3a7daa"/>
+                        </svg>
+                    </div>
+                    <div class="flex justify-center">
+                        <svg height="60" viewBox="0 0 100 30" class="opacity-70 hover:opacity-100 transition-opacity">
+                            <path d="M20,15 L40,5 L60,15 L80,5 L80,25 L60,15 L40,25 L20,15 Z" fill="#4d8f59"/>
+                        </svg>
+                    </div>
+                    <div class="flex justify-center">
+                        <svg height="60" viewBox="0 0 100 30" class="opacity-70 hover:opacity-100 transition-opacity">
+                            <rect x="25" y="5" width="50" height="20" rx="5" fill="#f7a600"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-center eco-primary">Awards & Recognition</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-award text-4xl text-yellow-500"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-center eco-secondary">Sustainability Innovation Award</h4>
+                        <p class="text-gray-600 text-center">World Economic Forum, 2023</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-trophy text-4xl text-yellow-500"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-center eco-secondary">Best Climate Tech Startup</h4>
+                        <p class="text-gray-600 text-center">TechCrunch Disrupt, 2022</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadowed">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-medal text-4xl text-yellow-500"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2 text-center eco-secondary">Environmental Impact Award</h4>
+                        <p class="text-gray-600 text-center">United Nations Environmental Programme, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Join Our Mission for a Sustainable Future</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8 opacity-90">Whether you're a consumer, business, or potential partner, you can be part of the movement toward more transparent and sustainable food systems.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold text-lg">Download App</a>
+                <a href="#" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-3 rounded-lg font-bold text-lg transition-colors">Business Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-yellow-500">EcoScanner</h3>
+                    <p class="text-gray-400 mb-4">Making sustainable choices simple through innovative technology and accurate environmental data.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about-us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="business-solutions.html" class="text-gray-400 hover:text-white">Business Solutions</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Research</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Methodology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">API Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Developer Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span>EcoScanner HQ, 123 Green Street, Cambridge, UK</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-yellow-500"></i>
+                            <span>info@ecoscanner.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-yellow-500"></i>
+                            <span>+44 (0) 1234 567890</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 EcoScanner. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="#" class="hover:text-white mr-4">Privacy Policy</a>
+                    <a href="#" class="hover:text-white mr-4">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Cookie Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
